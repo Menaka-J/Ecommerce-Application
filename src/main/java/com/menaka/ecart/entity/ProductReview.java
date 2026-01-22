@@ -20,5 +20,43 @@ public class ProductReview {
 
     private String comment;
 
+    //constructors
 
+
+    public ProductReview(Long id, Integer rating, String comment) {
+        this.id = id;
+        this.rating = rating;
+        this.comment = comment;
+    }
+
+
+    public ProductReview() {
+
+    }
+
+    //getter and setter
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public @Min(value = 1) @Max(value = 5) Integer getRating() {
+        return rating;
+    }
+
+    public void setRating(@Min(value = 1) @Max(value = 5) Integer rating) {
+        this.rating = rating;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 }
