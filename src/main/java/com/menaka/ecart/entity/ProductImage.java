@@ -14,4 +14,17 @@ public class ProductImage {
 
     private String publicId;
     private String url;
+
+    //constructor
+    public ProductImage(Long id, String publicId, String url) {
+        this.id = id;
+        this.publicId = publicId;
+        this.url = url;
+    }
+
+    public ProductImage() {
+
+    }
+
+
 }
