@@ -1,15 +1,38 @@
 package com.menaka.ecart.entity;
 
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PositiveOrZero;
+
+@Entity
 public class Product {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false)
+    @NotBlank(message = "Name field is required")
     private String name;
+
+    @Column(nullable = false)
+    @NotNull(message = "Price field is required")
+    @PositiveOrZero(message = "Value must be zero or greater than zero")
     private Double price;
+
+    @NotBlank(message = "Description field is required")
     private String description;
+
     private Double ratings = 0.0;
+
+    @NotBlank(message = "Seller field is required")
     private String seller;
+
+    @NotNull(message = "Stock field is required")
     private Integer stock;
     private Integer numOfReviews = 0;
+
 
     //constructor for initialization
     public Product(String seller, Long id, String name, Double price, String description, Double ratings, Integer stock, Integer numOfReviews) {
@@ -22,6 +45,11 @@ public class Product {
         this.stock = stock;
         this.numOfReviews = numOfReviews;
     }
+
+    public Product() {
+
+    }
+
 
     //getter and setter for all columns
 
