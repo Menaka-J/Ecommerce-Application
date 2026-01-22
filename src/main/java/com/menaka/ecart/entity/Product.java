@@ -5,6 +5,8 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 
+import java.util.List;
+
 @Entity
 @Table(name = "products")
 public class Product {
@@ -33,6 +35,16 @@ public class Product {
     private Integer stock;
 
     private Integer numOfReviews = 0;
+
+    //connection between product and image table
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "product_id")
+    private List<ProductImage> image;
+
+    //connection between product and review
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "product_id")
+    private List<ProductReview> reviews;
 
 
     //constructor for initialization
