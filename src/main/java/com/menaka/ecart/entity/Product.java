@@ -22,7 +22,6 @@ public class Product {
     @PositiveOrZero(message = "Value must be zero or greater than zero")
     private Double price;
 
-    @NotBlank(message = "Description field is required")
     private String description;
 
     private Double ratings = 0.0;
@@ -32,6 +31,7 @@ public class Product {
 
     @NotNull(message = "Stock field is required")
     private Integer stock;
+
     private Integer numOfReviews = 0;
 
 
