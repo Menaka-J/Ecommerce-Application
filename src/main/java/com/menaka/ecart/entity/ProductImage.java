@@ -27,7 +27,6 @@ public class ProductImage {
     }
 
     //getter and setter
-
     public Long getId() {
         return id;
     }
