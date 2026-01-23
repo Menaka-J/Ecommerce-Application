@@ -32,6 +32,10 @@ public class ProductService {
     }
 
     //for getting product by id
+    public Product getProductById(Long id) {
+        return productRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Product not found exception" + id));
+    }
 
 
 }
