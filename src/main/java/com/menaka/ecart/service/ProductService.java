@@ -38,7 +38,7 @@ public class ProductService {
     }
 
     //FOR SEARCHING PRODUCTS
-    public List<Product> searchProducts(String category, double minPrice, double maxPrice, String Keyword) {
+    public List<Product> searchProducts(String category, Double minPrice, Double maxPrice, String Keyword) {
         Specification<Product> spec = Specification.where(ProductSpecification.hasCategory(category));
         return productRepository.findAll(spec);
     }
