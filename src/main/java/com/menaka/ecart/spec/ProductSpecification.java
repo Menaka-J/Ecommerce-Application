@@ -3,6 +3,7 @@ package com.menaka.ecart.spec;
 import com.menaka.ecart.entity.Product;
 import org.springframework.data.jpa.domain.Specification;
 
+//for SERACHING products
 public class ProductSpecification {
 
     //for seraching product by category
