@@ -19,6 +19,10 @@ public class ProductSpecification {
             if (max == null) return cb.greaterThanOrEqualTo(root.get("price"), min);
             return cb.between(root.get("price"), min, max);
         };
+    }
+
+    //for searching by keyword
+    public static Specification<Product> haNameorDescriptionLike(String Keyword) {
 
     }
 
