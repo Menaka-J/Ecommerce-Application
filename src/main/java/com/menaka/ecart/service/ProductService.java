@@ -38,11 +38,11 @@ public class ProductService {
     }
 
     //FOR SEARCHING PRODUCTS
-    public List<Product> searchProducts(String category, Double minPrice, Double maxPrice, String Keyword) {
+    public List<Product> searchProducts(String category, Double minPrice, Double maxPrice, String Keyword, Double ratings) {
         Specification<Product> spec = Specification.where(ProductSpecification.hasCategory(category)) //by category
                 .and(ProductSpecification.priceBetween(minPrice, maxPrice)) //by price
                 .and(ProductSpecification.haNameorDescriptionLike(Keyword)) //by keyword
-                .and(ProductSpecification.);
+                .and(ProductSpecification.ratingGreaterThan(ratings));
         return productRepository.findAll(spec);
     }
 
