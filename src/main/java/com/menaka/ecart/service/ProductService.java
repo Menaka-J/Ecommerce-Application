@@ -4,6 +4,7 @@ import com.menaka.ecart.dto.ProductReviewDto;
 import com.menaka.ecart.entity.Product;
 import com.menaka.ecart.entity.ProductReview;
 import com.menaka.ecart.repository.ProductRepository;
+import com.menaka.ecart.repository.ProductReviewRepository;
 import com.menaka.ecart.spec.ProductSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -21,6 +22,9 @@ public class ProductService {
 
     @Autowired
     private ProductRepository productRepository;
+
+    @Autowired
+    private ProductReviewRepository productReviewRepository;
 
     //getting all products
     //return only selected no.of items
