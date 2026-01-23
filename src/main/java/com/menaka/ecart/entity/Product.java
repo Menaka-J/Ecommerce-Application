@@ -56,7 +56,7 @@ public class Product {
         this.description = description;
         this.ratings = ratings;
         this.stock = stock;
-        this.numOfReviews = numOfReviews;
+//        this.numOfReviews = numOfReviews;
     }
 
     public Product() {
