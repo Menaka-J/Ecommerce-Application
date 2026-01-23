@@ -5,6 +5,7 @@ import com.menaka.ecart.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Pageable;
@@ -35,6 +36,11 @@ public class ProductService {
     public Product getProductById(Long id) {
         return productRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Product not found exception" + id));
+    }
+
+    //FOR SEARCHING PRODUCTS
+    public void filterProducts(String category, double minPrice, String Keyword) {
+        Specification<Product> spec = Specification.where();
     }
 
 
