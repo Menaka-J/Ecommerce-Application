@@ -16,14 +16,14 @@ public class ProductReview {
 
     @Min(value = 1)
     @Max(value = 5)
-    private Integer rating;
+    private Double rating;
 
     private String comment;
 
     //constructors
 
 
-    public ProductReview(Long id, Integer rating, String comment) {
+    public ProductReview(Long id, Double rating, String comment) {
         this.id = id;
         this.rating = rating;
         this.comment = comment;
