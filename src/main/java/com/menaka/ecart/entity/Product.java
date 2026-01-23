@@ -142,19 +142,5 @@ public class Product {
         this.category = category;
     }
 
-    public List<ProductImage> getImages() {
-        return images;
-    }
 
-    public void setImages(List<ProductImage> images) {
-        this.images = images;
-    }
-
-    public List<ProductReview> getReviews() {
-        return reviews;
-    }
-
-    public void setReviews(List<ProductReview> reviews) {
-        this.reviews = reviews;
-    }
 }
