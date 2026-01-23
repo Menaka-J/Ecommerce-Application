@@ -25,6 +25,9 @@ public class ProductSeeder implements CommandLineRunner {
                     new Product(null, "Keychron K2 Pro", 89.00, "Wireless mechanical keyboard", 4.7, "Keychron", 50),
                     new Product(null, "Dell UltraSharp Monitor", 579.50, "4K USB-C Hub Monitor", 4.4, "Dell", 8)
             );
+
+            productRepository.save(demoProducts);
+            System.out.println("Seeded demo products");
         }
     }
 }
