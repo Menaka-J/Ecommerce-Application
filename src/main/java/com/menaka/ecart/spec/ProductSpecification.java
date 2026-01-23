@@ -24,7 +24,9 @@ public class ProductSpecification {
 
     //for searching by keyword
     public static Specification<Product> haNameorDescriptionLike(String Keyword) {
-
+        return (root, query, cb) -> {
+            if (Keyword == null || Keyword.isEmpty()) return null;
+        };
     }
 
 }
