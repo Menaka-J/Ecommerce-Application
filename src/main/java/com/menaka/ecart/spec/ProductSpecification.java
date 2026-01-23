@@ -26,6 +26,11 @@ public class ProductSpecification {
     public static Specification<Product> haNameorDescriptionLike(String Keyword) {
         return (root, query, cb) -> {
             if (Keyword == null || Keyword.isEmpty()) return null;
+            //else
+            return cb.or(
+                    cb.like(root.get("name"), "%" + Keyword.toLowerCase() + "%"),
+                    cb.like(root.get("description"), "%" + Keyword.toLowerCase() + "%")
+            );
         };
     }
 
