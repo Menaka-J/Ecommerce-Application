@@ -2,6 +2,7 @@ package com.menaka.ecart.service;
 
 import com.menaka.ecart.entity.Product;
 import com.menaka.ecart.repository.ProductRepository;
+import com.menaka.ecart.spec.ProductSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -40,7 +41,7 @@ public class ProductService {
 
     //FOR SEARCHING PRODUCTS
     public void filterProducts(String category, double minPrice, double maxPrice, String Keyword) {
-        Specification<Product> spec = Specification.where(ProductService.hasCategory(category));
+        Specification<Product> spec = Specification.where(ProductSpecification.hasCategory(category));
     }
 
 
