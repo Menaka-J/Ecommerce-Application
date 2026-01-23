@@ -4,10 +4,12 @@ import com.menaka.ecart.entity.Product;
 import com.menaka.ecart.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 //for inserting demo data
+@Component
 public class ProductSeeder implements CommandLineRunner {
 
     @Autowired
