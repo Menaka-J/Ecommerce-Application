@@ -44,11 +44,11 @@ public class ProductReview {
         this.id = id;
     }
 
-    public @Min(value = 1) @Max(value = 5) Integer getRating() {
+    public @Min(value = 1) @Max(value = 5) Double getRating() {
         return rating;
     }
 
-    public void setRating(@Min(value = 1) @Max(value = 5) Integer rating) {
+    public void setRating(@Min(value = 1) @Max(value = 5) Double rating) {
         this.rating = rating;
     }
 
