@@ -13,10 +13,11 @@ public class ProductSpecification {
 
     //for searching by price(min,max)
     public static Specification<Product> priceBetween(Double min, Double max) {
-        return (root, query, cb) ->
-        {
-
-        }
+        return (root, query, cb) -> {
+            if (min == null && max == null) return null;
+            if (min == null) return cb.lessThanOrEqualTo(root.get("price"), max);
+            if (max == null) return cb.greaterThanOrEqualTo(root.get("price"), min);
+        };
 
     }
 
