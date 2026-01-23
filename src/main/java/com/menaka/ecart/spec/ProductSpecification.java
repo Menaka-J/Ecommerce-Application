@@ -27,9 +27,10 @@ public class ProductSpecification {
         return (root, query, cb) -> {
             if (Keyword == null || Keyword.isEmpty()) return null;
             //else
+            String pattern = "%" + Keyword.toLowerCase() + "%";
             return cb.or(
-                    cb.like(root.get("name"), "%" + Keyword.toLowerCase() + "%"),
-                    cb.like(root.get("description"), "%" + Keyword.toLowerCase() + "%")
+                    cb.like(root.get("name"), pattern),
+                    cb.like(root.get("description"), pattern)
             );
         };
     }
