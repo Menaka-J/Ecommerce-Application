@@ -36,3 +36,5 @@ public class ProductController {
 
 
 }
+
+//params should match in postman while using postman
