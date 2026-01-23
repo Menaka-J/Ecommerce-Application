@@ -14,9 +14,10 @@ public class ProductReviewController {
 
     @Autowired
     private ProductService productService;
-    //for adding review
-    public ResponseEntity<?> addReview(@RequestBody ProductReviewDto reviewDto){
 
+    //for adding review
+    public ResponseEntity<?> addReview(@RequestBody ProductReviewDto reviewDto) {
+        productService.addReview(reviewDto);
     }
 }
 
