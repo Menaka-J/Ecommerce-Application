@@ -48,13 +48,14 @@ public class Product {
 
 
     //constructor for initialization
-    public Product(String seller, Long id, String name, Double price, String description, Double ratings, Integer stock, Integer numOfReviews) {
-        this.seller = seller;
+    public Product( Long id, String name, Double price, String description, Double ratings, String seller,Integer stock) {
+
         this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
         this.ratings = ratings;
+        this.seller = seller;
         this.stock = stock;
 //        this.numOfReviews = numOfReviews;
     }
