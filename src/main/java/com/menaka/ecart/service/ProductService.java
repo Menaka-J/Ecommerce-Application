@@ -2,6 +2,7 @@ package com.menaka.ecart.service;
 
 import com.menaka.ecart.dto.ProductReviewDto;
 import com.menaka.ecart.entity.Product;
+import com.menaka.ecart.entity.ProductReview;
 import com.menaka.ecart.repository.ProductRepository;
 import com.menaka.ecart.spec.ProductSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,6 +54,9 @@ public class ProductService {
         Product product = productRepository.findById(reviewDto.getProductId())
                 .orElseThrow(() -> new RuntimeException("Product not found"));
 
-
+        ProductReview review = new ProductReview();
+        review.setComment(reviewDto.getComment());
+        review.setRating(reviewDto.getRating());
+        review.setProduct(product);
     }
 }
