@@ -21,11 +21,11 @@ public class ProductSeeder implements CommandLineRunner {
 
         if (productRepository.count() == 0) {
             List<Product> demoProducts = List.of(
-                    new Product(null, "MacBook Air M3", 1099.00, "Lightweight powerhouse laptop", 4.8, "Apple Store", 10),
-                    new Product(null, "Sony WH-1000XM5", 348.00, "Noise cancelling headphones", 4.5, "Best Buy", 25),
-                    new Product(null, "Samsung Galaxy Watch 6", 299.99, "Smartwatch with health tracking", 4.6, "Samsung", 15),
-                    new Product(null, "Keychron K2 Pro", 89.00, "Wireless mechanical keyboard", 4.7, "Keychron", 50),
-                    new Product(null, "Dell UltraSharp Monitor", 579.50, "4K USB-C Hub Monitor", 4.4, "Dell", 8)
+                    new Product(null, "MacBook Air M3", 1099.00, "Lightweight powerhouse laptop", "Laptops", 4.8, "Apple Store", 10),
+                    new Product(null, "Sony WH-1000XM5", 348.00, "Noise cancelling headphones", "Audio", 4.5, "Best Buy", 25),
+                    new Product(null, "Samsung Galaxy Watch 6", 299.99, "Smartwatch with health tracking", "Wearables", 4.6, "Samsung", 15),
+                    new Product(null, "Keychron K2 Pro", 89.00, "Wireless mechanical keyboard", "Accessories", 4.7, "Keychron", 50),
+                    new Product(null, "Dell UltraSharp Monitor", 579.50, "4K USB-C Hub Monitor", "Monitors", 4.4, "Dell", 8)
             );
 
             productRepository.saveAll(demoProducts);
