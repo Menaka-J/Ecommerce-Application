@@ -61,4 +61,13 @@ public class ProductReview {
     @JoinColumn(name = "product_id")
     private Product product;
 
+    //getter and settre for product
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
 }
