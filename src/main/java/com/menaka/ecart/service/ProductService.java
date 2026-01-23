@@ -20,6 +20,7 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
+    //getting all products
     //return only selected no.of items
     public Map<String, Object> getAllProducts(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
@@ -29,4 +30,8 @@ public class ProductService {
         response.put("totalProducts", products.getTotalElements());
         return response;
     }
+
+    //for getting product by id
+
+
 }
