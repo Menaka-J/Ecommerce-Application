@@ -29,6 +29,7 @@ public class ProductController {
     }
 
     //FOR SERACHING PRODUCTS
+    @GetMapping("/search")
     public List<Product> searchProducts(@RequestParam String category, @RequestParam Double minPrice, @RequestParam Double maxPrice, @RequestParam String keyword) {
         return productService.searchProducts(category, minPrice, maxPrice, keyword);
     }
