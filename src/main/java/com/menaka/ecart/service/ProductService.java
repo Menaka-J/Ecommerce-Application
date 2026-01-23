@@ -39,8 +39,8 @@ public class ProductService {
     }
 
     //FOR SEARCHING PRODUCTS
-    public void filterProducts(String category, double minPrice, String Keyword) {
-        Specification<Product> spec = Specification.where();
+    public void filterProducts(String category, double minPrice, double maxPrice, String Keyword) {
+        Specification<Product> spec = Specification.where(ProductService.hasCategory(category));
     }
 
 

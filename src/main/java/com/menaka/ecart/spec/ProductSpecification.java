@@ -10,4 +10,5 @@ public class ProductSpecification {
         return (root, query, cb) ->
                 category == null ? null : cb.equal(root.get("category"), category);
     }
+
 }
