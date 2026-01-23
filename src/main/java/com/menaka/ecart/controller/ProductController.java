@@ -28,6 +28,11 @@ public class ProductController {
         return productService.getProductById(id);
     }
 
+    //FOR SERACHING PRODUCTS
+    public List<Product> searchProducts(@RequestParam String category, @RequestParam Double minPrice, @RequestParam Double maxPrice, @RequestParam String keyword) {
+
+
+    }
 
 
 }
