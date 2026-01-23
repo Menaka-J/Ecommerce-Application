@@ -1,5 +1,6 @@
 package com.menaka.ecart.service;
 
+import com.menaka.ecart.dto.ProductReviewDto;
 import com.menaka.ecart.entity.Product;
 import com.menaka.ecart.repository.ProductRepository;
 import com.menaka.ecart.spec.ProductSpecification;
@@ -47,4 +48,9 @@ public class ProductService {
     }
 
 
+    //FOR ADDING REVIEWS
+    public void addReview(ProductReviewDto reviewDto){
+        Product product = productRepository.findById(reviewDto.getProductId())
+                .orElseThrow();
+    }
 }
