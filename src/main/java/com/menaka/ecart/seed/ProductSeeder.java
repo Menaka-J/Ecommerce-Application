@@ -31,7 +31,7 @@ public class ProductSeeder implements CommandLineRunner {
             productRepository.saveAll(demoProducts);
             System.out.println("Seeded demo products");
         } else {
-            System.out.println("Products already exits!skipping this!");
+            System.out.println("Products already exits!skipping seed!");
         }
     }
 }
