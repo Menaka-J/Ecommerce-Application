@@ -11,6 +11,13 @@ public class ProductSpecification {
                 category == null ? null : cb.equal(root.get("category"), category);
     }
 
-    //for searching by price
+    //for searching by price(min,max)
+    public static Specification<Product> priceBetween(Double min, Double max) {
+        return (root, query, cb) ->
+        {
+
+        }
+
+    }
 
 }
