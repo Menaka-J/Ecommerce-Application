@@ -21,9 +21,8 @@ public class ProductController {
 
     //getting all products form service packeg
     @GetMapping
-    public ResponseEntity<Map<String, Object>> getAllProducts(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "5") int size) {
-        List<Product> products = productService.getALlProducte();
-        return ResponseEntity.ok(products);
+    public Map<String, Object> getAllProducts(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "5") int size) {
+        return productService.getAllProducts(page, size);
     }
 
 }

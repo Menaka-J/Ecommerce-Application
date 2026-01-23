@@ -21,7 +21,7 @@ public class ProductService {
     private ProductRepository productRepository;
 
     //return only selected no.of items
-    public Map<String, Object> getALlProducte(int page, int size) {
+    public Map<String, Object> getAllProducts(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
         Page<Product> products = productRepository.findAll(pageable);
         Map<String, Object> response = new HashMap<>();
