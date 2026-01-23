@@ -28,7 +28,7 @@ public class ProductSeeder implements CommandLineRunner {
                     new Product(null, "Dell UltraSharp Monitor", 579.50, "4K USB-C Hub Monitor", 4.4, "Dell", 8)
             );
 
-            productRepository.save(demoProducts);
+            productRepository.saveAll(demoProducts);
             System.out.println("Seeded demo products");
         } else {
             System.out.println("Products already exits!skipping this!");
