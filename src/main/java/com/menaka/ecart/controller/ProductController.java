@@ -30,7 +30,7 @@ public class ProductController {
 
     //FOR SERACHING PRODUCTS
     @GetMapping("/search")
-    public List<Product> searchProducts(@RequestParam String category, @RequestParam Double minPrice, @RequestParam Double maxPrice, @RequestParam String keyword) {
+    public List<Product> searchProducts(@RequestParam(required = false) String category, @RequestParam(required = false) Double minPrice, @RequestParam(required = false) Double maxPrice, @RequestParam(required = false) String keyword) {
         return productService.searchProducts(category, minPrice, maxPrice, keyword);
     }
 
