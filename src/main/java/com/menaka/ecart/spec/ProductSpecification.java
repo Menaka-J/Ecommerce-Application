@@ -11,5 +11,6 @@ public class ProductSpecification {
                 category == null ? null : cb.equal(root.get("category"), category);
     }
 
+    //for searching by price
 
 }
