@@ -25,10 +25,7 @@ public class ProductSeeder implements CommandLineRunner {
                     new Product(null, "Sony WH-1000XM5", 348.00, "Noise cancelling headphones", 4.5, "Best Buy", 25),
                     new Product(null, "Samsung Galaxy Watch 6", 299.99, "Smartwatch with health tracking", 4.6, "Samsung", 15),
                     new Product(null, "Keychron K2 Pro", 89.00, "Wireless mechanical keyboard", 4.7, "Keychron", 50),
-                    new Product(null, "Dell UltraSharp Monitor", 579.50, "4K USB-C Hub Monitor", 4.4, "Dell", 8),
-                    new Product(null, "Logitech MX Master 3S", 99.99, "Ergonomic performance mouse", 4.9, "Logitech", 40),
-                    new Product(null, "Kindle Paperwhite", 139.99, "Waterproof e-reader", 4.8, "Amazon", 30),
-                    new Product(null, "JBL Flip 6", 129.95, "Portable waterproof speaker", 4.7, "JBL Store", 20)
+                    new Product(null, "Dell UltraSharp Monitor", 579.50, "4K USB-C Hub Monitor", 4.4, "Dell", 8)
             );
 
             productRepository.saveAll(demoProducts);
