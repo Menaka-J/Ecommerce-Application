@@ -62,5 +62,6 @@ public class ProductService {
         review.setComment(reviewDto.getComment());
         review.setRating(reviewDto.getRating());
         review.setProduct(product);
+        productReviewRepository.save(review);
     }
 }
