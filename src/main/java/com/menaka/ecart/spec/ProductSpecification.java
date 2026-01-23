@@ -17,6 +17,7 @@ public class ProductSpecification {
             if (min == null && max == null) return null;
             if (min == null) return cb.lessThanOrEqualTo(root.get("price"), max);
             if (max == null) return cb.greaterThanOrEqualTo(root.get("price"), min);
+            return cb.between(root.get("price"), min, max);
         };
 
     }
