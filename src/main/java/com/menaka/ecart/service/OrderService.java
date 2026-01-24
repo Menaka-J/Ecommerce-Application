@@ -19,7 +19,7 @@ public class OrderService {
     @Autowired
     private OrderRepository orderRepo;
 
-    public void createOrder(CreateOrderRequest orderRequest) {
+    public Order createOrder(CreateOrderRequest orderRequest) {
         Order order = new Order();
         order.setStatus("PENDING");
         double totalItemsAmount = 0;
@@ -43,6 +43,8 @@ public class OrderService {
         totalAmount = totalItemsAmount + taxAmount;
         order.setTotalAmount(totalAmount);
         order.setTaxAmount(taxAmount);
+
+        return orderRepo.save(order);
     }
 
 
