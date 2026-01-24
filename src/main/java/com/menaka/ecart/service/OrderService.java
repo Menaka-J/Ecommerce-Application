@@ -38,6 +38,7 @@ public class OrderService {
         double taxAmount = 10;
         totalAmount = totalItemsAmount + taxAmount;
         order.setTaxAmount(totalAmount);
+        order.setTaxAmount(taxAmount);
     }
 
 
