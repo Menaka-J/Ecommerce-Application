@@ -1,5 +1,7 @@
 package com.menaka.ecart.dto;
 
+import java.util.List;
+
 public class CreateOrderRequest {
-    private OrderItemDto orderItems;
+    private List<OrderItemDto> orderItems;
 }
