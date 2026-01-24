@@ -29,9 +29,11 @@ public class OrderService {
 
             Product product = prodRepo.findById(item.getProductId()).orElseThrow(() -> new RuntimeException("Product not found"));
             orderItem.setProduct(product);
+            totalItemsAmount += item.getPrice() * item.getQuantity();
 
             order.getOrderItems().add(orderItem);
         }
+        order.setTotalItemsAmount(totalItemsAmount);
     }
 
 
