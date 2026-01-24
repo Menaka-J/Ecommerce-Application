@@ -142,5 +142,12 @@ public class Product {
         this.category = category;
     }
 
+    //for another table data
+    public List<ProductReview> getReviews() {
+        return reviews;
+    }
 
+    public void setReviews(List<ProductReview> reviews) {
+        this.reviews = reviews;
+    }
 }
