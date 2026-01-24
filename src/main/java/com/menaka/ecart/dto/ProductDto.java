@@ -1,7 +1,6 @@
 package com.menaka.ecart.dto;
 
 import com.menaka.ecart.entity.ProductImage;
-import com.menaka.ecart.entity.ProductReview;
 
 import java.util.List;
 
@@ -26,7 +25,7 @@ public class ProductDto {
     private Integer numOfReviews = 0;
 
     //connection between product and image table
-    private List<ProductImage> images;
+    private List<ProductImageDto> images;
 
     //connection between product and review
     private List<ProductReviewDto> reviews;
@@ -135,12 +134,13 @@ public class ProductDto {
     }
 
     //for iamge table
-    public List<ProductImage> getImages() {
+    public List<ProductImageDto> getImages() {
         return images;
     }
 
-    public void setImages(List<ProductImage> images) {
+    public void setImages(List<ProductImageDto> images) {
         this.images = images;
     }
+
 
 }
