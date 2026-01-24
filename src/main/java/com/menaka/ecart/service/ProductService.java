@@ -60,6 +60,7 @@ public class ProductService {
             reviewDto.setId(reviewDto.getId());
             reviewDto.setComment(review.getComment());
             reviewDto.setRating(review.getRating());
+            return reviewDto;
         }).collect(Collectors.toList());
         dto.setReviews(reviewDtos);
 
