@@ -154,5 +154,12 @@ public class Product {
         this.reviews = reviews;
     }
 
+    //for image table data
+    public List<ProductImage> getImages() {
+        return images;
+    }
 
+    public void setImages(List<ProductImage> images) {
+        this.images = images;
+    }
 }
