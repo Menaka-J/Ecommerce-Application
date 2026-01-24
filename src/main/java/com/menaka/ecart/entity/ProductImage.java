@@ -55,7 +55,7 @@ public class ProductImage {
 
     //constructor for image
     public ProductImage(String url, Product product) {
-        this.url = url;
+        this.url = "/uploads" + url;
         this.publicId = url;
         this.product = product;
     }
