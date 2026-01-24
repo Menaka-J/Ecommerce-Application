@@ -54,6 +54,5 @@ public class ProductImage {
 
     @ManyToOne()
     @JoinColumn(name = "product_id")
-//    @JsonIgnore //for no loop in api json
     private Product product;
 }
