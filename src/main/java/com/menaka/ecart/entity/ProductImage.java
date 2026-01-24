@@ -23,9 +23,6 @@ public class ProductImage {
 
     }
 
-    //constructor for image
-    public ProductImage(String url, Product product) {
-    }
 
     //getter and setter
     public Long getId() {
@@ -56,6 +53,7 @@ public class ProductImage {
     @JoinColumn(name = "product_id")
     private Product product;
 
+    //constructor for image
     public ProductImage(String url, Product product) {
         this.url = url;
         this.publicId = url;
