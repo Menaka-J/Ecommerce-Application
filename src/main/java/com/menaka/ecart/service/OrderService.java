@@ -10,6 +10,8 @@ import com.menaka.ecart.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Service
 public class OrderService {
 
@@ -43,6 +45,7 @@ public class OrderService {
         totalAmount = totalItemsAmount + taxAmount;
         order.setTotalAmount(totalAmount);
         order.setTaxAmount(taxAmount);
+        order.setOrderNo(UUID.randomUUID().toString());
 
         return orderRepo.save(order);
     }
