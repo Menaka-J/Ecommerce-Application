@@ -45,7 +45,7 @@ public class OrderService {
         totalAmount = totalItemsAmount + taxAmount;
         order.setTotalAmount(totalAmount);
         order.setTaxAmount(taxAmount);
-        order.setOrderNo(UUID.randomUUID().toString());
+        order.setReferenceId(UUID.randomUUID().toString());
 
         return orderRepo.save(order);
     }
