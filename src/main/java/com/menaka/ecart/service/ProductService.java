@@ -61,6 +61,7 @@ public class ProductService {
             reviewDto.setComment(review.getComment());
             reviewDto.setRating(review.getRating());
         }).collect(Collectors.toList());
+        dto.setReviews(reviewDtos);
 
         return dto;
     }
