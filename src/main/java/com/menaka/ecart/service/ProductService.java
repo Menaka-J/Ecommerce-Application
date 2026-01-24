@@ -17,6 +17,7 @@ import org.springframework.data.domain.Pageable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Service
@@ -59,7 +60,8 @@ public class ProductService {
             reviewDto.setId(reviewDto.getId());
             reviewDto.setComment(review.getComment());
             reviewDto.setRating(review.getRating());
-        })
+        }).collect(Collectors.toList());
+
         return dto;
     }
 
