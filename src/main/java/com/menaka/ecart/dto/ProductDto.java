@@ -30,13 +30,9 @@ public class ProductDto {
     private Integer numOfReviews = 0;
 
     //connection between product and image table
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "product_id")
     private List<ProductImage> images;
 
     //connection between product and review
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "product_id")
     private List<ProductReview> reviews;
 
 
