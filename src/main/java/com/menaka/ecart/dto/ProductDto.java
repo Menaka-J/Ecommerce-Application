@@ -133,4 +133,14 @@ public class ProductDto {
     public void setReviews(List<ProductReviewDto> reviews) {
         this.reviews = reviews;
     }
+
+    //for iamge table
+    public List<ProductImage> getImages() {
+        return images;
+    }
+
+    public void setImages(List<ProductImage> images) {
+        this.images = images;
+    }
+
 }
