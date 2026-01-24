@@ -59,4 +59,12 @@ public class ProductImage {
         this.publicId = url;
         this.product = product;
     }
+
+    public ProductImage(Long id, String publicId, String url, Product product) {
+        this.id = id;
+        this.publicId = publicId;
+        this.url = url;
+        this.product = product;
+    }
+
 }
