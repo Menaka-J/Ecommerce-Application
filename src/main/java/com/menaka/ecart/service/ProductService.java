@@ -17,6 +17,7 @@ import org.springframework.data.domain.Pageable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductService {
@@ -32,8 +33,11 @@ public class ProductService {
     public Map<String, Object> getAllProducts(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
         Page<Product> products = productRepository.findAll(pageable);
+
+        List<ProductDto> productDtos = products.stream().map(this::convertToDto).collect(Collectors.toList());
         Map<String, Object> response = new HashMap<>();
-        response.put("products", products.getContent());
+//        response.put("products", products.getContent());
+        response.put("products", productDtos);
         response.put("totalProducts", products.getTotalElements());
         return response;
     }
