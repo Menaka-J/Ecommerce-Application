@@ -1,9 +1,6 @@
 package com.menaka.ecart.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class ProductImage {
@@ -54,4 +51,9 @@ public class ProductImage {
     public void setUrl(String url) {
         this.url = url;
     }
+
+    @ManyToOne()
+    @JoinColumn(name = "product_id")
+//    @JsonIgnore //for no loop in api json
+    private Product product;
 }
