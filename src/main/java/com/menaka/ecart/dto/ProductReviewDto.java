@@ -1,11 +1,14 @@
 package com.menaka.ecart.dto;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public class ProductReviewDto {
 
     @NotNull(message = "Product ID is required")
     private Long productId;
+
+    @NotBlank(message = "Comment cannot be blank")
     private String comment;
     private Double rating;
 
