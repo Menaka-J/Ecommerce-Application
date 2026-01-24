@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "products")
@@ -61,6 +62,8 @@ public class Product {
         this.seller = seller;
         this.stock = stock;
 //        this.numOfReviews = numOfReviews;
+
+        this.images = images.stream().map(url -> new ProductImage(url, this)).collect(Collectors.toList());
     }
 
     public Product() {

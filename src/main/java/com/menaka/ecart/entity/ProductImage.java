@@ -26,6 +26,10 @@ public class ProductImage {
 
     }
 
+    //constructor for image
+    public ProductImage(ProductImage url, Product product) {
+    }
+
     //getter and setter
     public Long getId() {
         return id;
