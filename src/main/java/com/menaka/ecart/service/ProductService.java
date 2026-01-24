@@ -30,6 +30,7 @@ public class ProductService {
     private ProductReviewRepository productReviewRepository;
 
     //getting all products
+    //=======================================================================================================================
     //return only selected no.of items
     public Map<String, Object> getAllProducts(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
@@ -68,6 +69,7 @@ public class ProductService {
         return dto;
     }
 
+    //===============================================================================================================
     //for getting product by id
     public Product getProductById(Long id) {
         return productRepository.findById(id)
