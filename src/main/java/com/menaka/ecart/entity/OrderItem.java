@@ -1,9 +1,6 @@
 package com.menaka.ecart.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class OrderItem {
@@ -17,6 +14,9 @@ public class OrderItem {
     private Integer quantity;
     private String image;
     private Double price;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id")
     private Product product;
 
     //constructor
