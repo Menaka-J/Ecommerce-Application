@@ -2,6 +2,7 @@ package com.menaka.ecart.controller;
 
 import com.menaka.ecart.dto.ProductReviewDto;
 import com.menaka.ecart.service.ProductService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -20,7 +21,7 @@ public class ProductReviewController {
 
     //for adding review
     @PostMapping
-    public ResponseEntity<?> addReview(@RequestBody ProductReviewDto reviewDto) {
+    public ResponseEntity<?> addReview(@RequestBody @Valid ProductReviewDto reviewDto) {
         productService.addReview(reviewDto);
         return ResponseEntity.status(HttpStatus.CREATED).body("Review added");
     }
