@@ -22,6 +22,7 @@ public class OrderController {
     }
 
     //for getting order
+    @GetMapping("/{referenceId}")
     public ResponseEntity<?> getOrder(@PathVariable String referenceId) {
         orderService.getOrder(referenceId);
     }
