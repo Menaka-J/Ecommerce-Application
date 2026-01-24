@@ -2,6 +2,7 @@ package com.menaka.ecart.entity;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -14,7 +15,7 @@ public class Order {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "order_id")
-    private List<OrderItem> orderItems;
+    private List<OrderItem> orderItems = new ArrayList<OrderItem>(); //initially not empty
 
     private Double totalItemsAmount;
     private Double taxAmount;
