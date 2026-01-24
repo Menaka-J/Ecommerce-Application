@@ -56,7 +56,17 @@ public class ProductService {
         dto.setStock(product.getStock());
         dto.setNumOfReviews(product.getNumOfReviews());
 
-//        dto.setReviews(product.getReviews());
+//for reviews
+        List<ProductReviewDto> reviewDtos = product.getReviews().stream().map(review -> {
+            ProductReviewDto reviewDto = new ProductReviewDto();
+            reviewDto.setProductId(review.getId());
+            reviewDto.setComment(review.getComment());
+            reviewDto.setRating(review.getRating());
+            return reviewDto;
+        }).collect(Collectors.toList());
+        dto.setReviews(reviewDtos);
+
+        //for images
         List<ProductReviewDto> reviewDtos = product.getReviews().stream().map(review -> {
             ProductReviewDto reviewDto = new ProductReviewDto();
             reviewDto.setProductId(review.getId());
