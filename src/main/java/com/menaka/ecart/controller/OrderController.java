@@ -1,6 +1,7 @@
 package com.menaka.ecart.controller;
 
 import com.menaka.ecart.dto.CreateOrderRequest;
+import com.menaka.ecart.dto.OrderCreated;
 import com.menaka.ecart.entity.Order;
 import com.menaka.ecart.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,8 @@ public class OrderController {
     //for cfeating order
     @PostMapping
     public ResponseEntity<?> createOrder(@RequestBody CreateOrderRequest orderRequest) {
-        Order order = orderService.createOrder(orderRequest);
-        return ResponseEntity.ok().body(order);
+        OrderCreated orderCreated = orderService.createOrder(orderRequest);
+        return ResponseEntity.ok().body(orderCreated);
     }
 
     //for getting order
