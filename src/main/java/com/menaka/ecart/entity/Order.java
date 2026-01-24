@@ -8,4 +8,10 @@ import java.util.List;
 public class Order {
 
     private List<OrderItem> orderItems;
+    private Double totalItemsAmount;
+    private Double taxAmount;
+    private Double totalAmount;
+    private String status;
+    private String orderNo;
+
 }
