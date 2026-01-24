@@ -1,5 +1,6 @@
 package com.menaka.ecart.service;
 
+import com.menaka.ecart.dto.ProductDto;
 import com.menaka.ecart.dto.ProductReviewDto;
 import com.menaka.ecart.entity.Product;
 import com.menaka.ecart.entity.ProductReview;
@@ -35,6 +36,20 @@ public class ProductService {
         response.put("products", products.getContent());
         response.put("totalProducts", products.getTotalElements());
         return response;
+    }
+
+    public void convertToDto(Product product) {
+        ProductDto dto = new ProductDto();
+        dto.setId(product.getId());
+        dto.setName(product.getName());
+        dto.setDescription(product.getDescription());
+        dto.setRatings(product.getRatings());
+        dto.setCategory(product.getCategory());
+        dto.setSeller(product.getSeller());
+        dto.setStock(product.getStock());
+        dto.setNumOfReviews(product.getNumOfReviews());
+
+
     }
 
     //for getting product by id
