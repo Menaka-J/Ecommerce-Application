@@ -150,4 +150,6 @@ public class Product {
     public void setReviews(List<ProductReview> reviews) {
         this.reviews = reviews;
     }
+
+
 }
