@@ -12,4 +12,9 @@ public class OrderCreated {
     public void setReferenceId(String referenceId) {
         this.referenceId = referenceId;
     }
+    //constructor
+
+    public OrderCreated(String referenceId) {
+        this.referenceId = referenceId;
+    }
 }

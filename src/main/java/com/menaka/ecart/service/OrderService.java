@@ -1,6 +1,7 @@
 package com.menaka.ecart.service;
 
 import com.menaka.ecart.dto.CreateOrderRequest;
+import com.menaka.ecart.dto.OrderCreated;
 import com.menaka.ecart.dto.OrderItemDto;
 import com.menaka.ecart.entity.Order;
 import com.menaka.ecart.entity.OrderItem;
@@ -21,7 +22,7 @@ public class OrderService {
     @Autowired
     private OrderRepository orderRepo;
 
-    public Order createOrder(CreateOrderRequest orderRequest) {
+    public OrderCreated createOrder(CreateOrderRequest orderRequest) {
         Order order = new Order();
         order.setStatus("PENDING");
         double totalItemsAmount = 0;
@@ -45,9 +46,12 @@ public class OrderService {
         totalAmount = totalItemsAmount + taxAmount;
         order.setTotalAmount(totalAmount);
         order.setTaxAmount(taxAmount);
-        order.setReferenceId(UUID.randomUUID().toString());
 
-        return orderRepo.save(order);
+        String refId = UUID.randomUUID().toString();
+        order.setReferenceId(refId);
+
+        orderRepo.save(order);
+        return new OrderCreated(refId);
     }
 
 
