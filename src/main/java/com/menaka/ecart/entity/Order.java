@@ -14,6 +14,7 @@ public class Order {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "order_id")
     private List<OrderItem> orderItems;
+
     private Double totalItemsAmount;
     private Double taxAmount;
     private Double totalAmount;
