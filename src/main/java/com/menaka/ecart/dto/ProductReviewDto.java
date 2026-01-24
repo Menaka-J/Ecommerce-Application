@@ -10,6 +10,8 @@ public class ProductReviewDto {
 
     @NotBlank(message = "Comment cannot be blank")
     private String comment;
+
+    @NotNull(message = "Rating is required")
     private Double rating;
 
     //getter and setter
