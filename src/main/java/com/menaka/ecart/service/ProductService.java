@@ -1,6 +1,7 @@
 package com.menaka.ecart.service;
 
 import com.menaka.ecart.dto.ProductDto;
+import com.menaka.ecart.dto.ProductImageDto;
 import com.menaka.ecart.dto.ProductReviewDto;
 import com.menaka.ecart.entity.Product;
 import com.menaka.ecart.entity.ProductReview;
@@ -67,12 +68,9 @@ public class ProductService {
         dto.setReviews(reviewDtos);
 
         //for images
-        List<ProductReviewDto> reviewDtos = product.getReviews().stream().map(review -> {
-            ProductReviewDto reviewDto = new ProductReviewDto();
-            reviewDto.setProductId(review.getId());
-            reviewDto.setComment(review.getComment());
-            reviewDto.setRating(review.getRating());
-            return reviewDto;
+        List<ProductImageDto> imageDtos = product.getImages().stream().map(image -> {
+            ProductImageDto imageDto = new ProductImageDto(image.getUrl());
+            return imageDto;
         }).collect(Collectors.toList());
         dto.setReviews(reviewDtos);
 
