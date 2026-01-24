@@ -2,10 +2,6 @@ package com.menaka.ecart.dto;
 
 import com.menaka.ecart.entity.ProductImage;
 import com.menaka.ecart.entity.ProductReview;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.PositiveOrZero;
 
 import java.util.List;
 
@@ -37,7 +33,7 @@ public class ProductDto {
 
 
     //constructor for initialization
-    public Product(Long id, String name, Double price, String description, String category, Double ratings, String seller, Integer stock) {
+    public void Product(Long id, String name, Double price, String description, String category, Double ratings, String seller, Integer stock) {
 
         this.id = id;
         this.name = name;
@@ -50,7 +46,7 @@ public class ProductDto {
 //        this.numOfReviews = numOfReviews;
     }
 
-    public Product() {
+    public void Product() {
 
     }
 
