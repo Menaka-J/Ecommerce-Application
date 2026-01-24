@@ -52,6 +52,6 @@ public class OrderService {
 
 
     public Order getOrder(String referenceId) {
-
+        return orderRepo.findByReferenceId(referenceId).orElseThrow(() -> new RuntimeException("No order found with this reference id " + referenceId));
     }
 }
