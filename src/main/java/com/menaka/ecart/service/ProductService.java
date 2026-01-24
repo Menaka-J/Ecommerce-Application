@@ -72,7 +72,7 @@ public class ProductService {
             ProductImageDto imageDto = new ProductImageDto(image.getUrl());
             return imageDto;
         }).collect(Collectors.toList());
-        dto.setReviews(reviewDtos);
+        dto.setImages(imageDtos);
 
         return dto;
     }
