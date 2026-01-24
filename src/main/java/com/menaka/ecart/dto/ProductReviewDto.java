@@ -1,7 +1,10 @@
 package com.menaka.ecart.dto;
 
+import jakarta.validation.constraints.NotNull;
+
 public class ProductReviewDto {
 
+    @NotNull(message = "Product ID is required")
     private Long productId;
     private String comment;
     private Double rating;
