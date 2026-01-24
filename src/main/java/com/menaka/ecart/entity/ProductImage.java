@@ -27,7 +27,7 @@ public class ProductImage {
     }
 
     //constructor for image
-    public ProductImage(ProductImage url, Product product) {
+    public ProductImage(String url, Product product) {
     }
 
     //getter and setter

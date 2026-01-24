@@ -51,7 +51,7 @@ public class Product {
 
 
     //constructor for initialization
-    public Product(Long id, String name, Double price, String description, String category, Double ratings, String seller, Integer stock, List<ProductImage> images) {
+    public Product(Long id, String name, Double price, String description, String category, Double ratings, String seller, Integer stock, List<String> images) {
 
         this.id = id;
         this.name = name;
