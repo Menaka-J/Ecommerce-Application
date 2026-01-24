@@ -49,7 +49,7 @@ public class ProductService {
         dto.setStock(product.getStock());
         dto.setNumOfReviews(product.getNumOfReviews());
 
-
+        dto.setRatings(product.getReviews());
     }
 
     //for getting product by id
