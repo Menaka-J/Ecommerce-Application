@@ -1,5 +1,6 @@
 package com.menaka.ecart.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -59,6 +60,7 @@ public class ProductReview {
     //new field
     @ManyToOne()
     @JoinColumn(name = "product_id")
+    @JsonIgnore //for no loop in api json
     private Product product;
 
     //getter and settre for product
