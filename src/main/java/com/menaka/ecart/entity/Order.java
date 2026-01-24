@@ -14,4 +14,53 @@ public class Order {
     private String status;
     private String orderNo;
 
+    //getter and setter
+
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
+    }
+
+    public void setOrderItems(List<OrderItem> orderItems) {
+        this.orderItems = orderItems;
+    }
+
+    public Double getTotalItemsAmount() {
+        return totalItemsAmount;
+    }
+
+    public void setTotalItemsAmount(Double totalItemsAmount) {
+        this.totalItemsAmount = totalItemsAmount;
+    }
+
+    public Double getTaxAmount() {
+        return taxAmount;
+    }
+
+    public void setTaxAmount(Double taxAmount) {
+        this.taxAmount = taxAmount;
+    }
+
+    public Double getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void setTotalAmount(Double totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getOrderNo() {
+        return orderNo;
+    }
+
+    public void setOrderNo(String orderNo) {
+        this.orderNo = orderNo;
+    }
 }
