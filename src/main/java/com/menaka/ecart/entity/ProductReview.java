@@ -60,7 +60,7 @@ public class ProductReview {
     //new field
     @ManyToOne()
     @JoinColumn(name = "product_id")
-    @JsonIgnore //for no loop in api json
+//    @JsonIgnore //for no loop in api json
     private Product product;
 
     //getter and settre for product
