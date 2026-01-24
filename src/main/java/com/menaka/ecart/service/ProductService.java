@@ -42,7 +42,7 @@ public class ProductService {
         return response;
     }
 
-    public void convertToDto(Product product) {
+    public ProductDto convertToDto(Product product) {
         ProductDto dto = new ProductDto();
         dto.setId(product.getId());
         dto.setName(product.getName());
@@ -53,7 +53,8 @@ public class ProductService {
         dto.setStock(product.getStock());
         dto.setNumOfReviews(product.getNumOfReviews());
 
-        dto.setRatings(product.getReviews());
+        dto.setReviews(product.getReviews());
+        return dto;
     }
 
     //for getting product by id
