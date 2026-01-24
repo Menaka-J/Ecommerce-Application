@@ -17,6 +17,8 @@ public class OrderService {
 
     public void createOrder(CreateOrderRequest orderRequest) {
         Order order = new Order();
+        order.setStatus("PENDING");
+        double totalItemsAmount = 0;
 
         for (OrderItemDto item : orderRequest.getOrderItems()) {
             OrderItem orderItem = new OrderItem();
