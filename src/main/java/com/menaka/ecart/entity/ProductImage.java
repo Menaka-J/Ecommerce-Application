@@ -55,4 +55,10 @@ public class ProductImage {
     @ManyToOne()
     @JoinColumn(name = "product_id")
     private Product product;
+
+    public ProductImage(String url, Product product) {
+        this.url = url;
+        this.publicId = url;
+        this.product = product;
+    }
 }
