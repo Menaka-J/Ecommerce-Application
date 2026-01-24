@@ -15,9 +15,6 @@ public class ProductDto {
 
     private String name;
 
-    @Column(nullable = false)
-    @NotNull(message = "Price field is required")
-    @PositiveOrZero(message = "Value must be zero or greater than zero")
     private Double price;
 
     private String description;
@@ -26,10 +23,8 @@ public class ProductDto {
 
     private Double ratings = 0.0;
 
-    @NotBlank(message = "Seller field is required")
     private String seller;
 
-    @NotNull(message = "Stock field is required")
     private Integer stock;
 
     private Integer numOfReviews = 0;
