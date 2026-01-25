@@ -13,6 +13,7 @@ public class EcartApplication {
 
         Dotenv dotenv = Dotenv.configure().directory("./").ignoreIfMalformed().ignoreIfMissing().load();
 
+        //for setting db url link
         if (dotenv.get("DB_URL") != null) {
             System.setProperty("DB_URL", dotenv.get("DB_URL"));
         }
