@@ -17,6 +17,7 @@ public class EcartApplication {
         if (dotenv.get("DB_URL") != null) {
             System.setProperty("DB_URL", dotenv.get("DB_URL"));
         }
+        //for setting db username name
         if (dotenv.get("DB_USER") != null) {
             System.setProperty("DB_USER", dotenv.get("DB_USER"));
         }
