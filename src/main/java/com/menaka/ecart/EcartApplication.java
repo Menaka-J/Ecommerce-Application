@@ -11,6 +11,7 @@ public class EcartApplication {
 
     public static void main(String[] args) {
 
+        //for configuration or .env file
         Dotenv dotenv = Dotenv.configure().directory("./").ignoreIfMalformed().ignoreIfMissing().load();
 
         //for setting db url link
