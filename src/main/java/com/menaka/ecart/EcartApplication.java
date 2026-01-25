@@ -27,7 +27,7 @@ public class EcartApplication {
             System.setProperty("DB_PASS", dotenv.get("DB_PASS"));
         }
 
-        //run
+        //for running application
         SpringApplication.run(EcartApplication.class, args);
     }
 
