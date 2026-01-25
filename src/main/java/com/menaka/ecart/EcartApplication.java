@@ -19,8 +19,8 @@ public class EcartApplication {
         if (dotenv.get("DB_USER") != null) {
             System.setProperty("DB_USER", dotenv.get("DB_USER"));
         }
-        if (dotenv.get("DB_URL") != null) {
-            System.setProperty("DB_URL", dotenv.get("DB_URL"));
+        if (dotenv.get("DB_PASS") != null) {
+            System.setProperty("DB_PASS", dotenv.get("DB_PASS"));
         }
         SpringApplication.run(EcartApplication.class, args);
     }
