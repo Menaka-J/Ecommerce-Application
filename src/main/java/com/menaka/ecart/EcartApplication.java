@@ -13,8 +13,14 @@ public class EcartApplication {
 
         Dotenv dotenv = Dotenv.configure().directory("./").ignoreIfMalformed().ignoreIfMissing().load();
 
-        if (dotenv.get("DB_URL")!=null){
-            System.setProperty("DB_URL",dotenv.get("DB_URL"));
+        if (dotenv.get("DB_URL") != null) {
+            System.setProperty("DB_URL", dotenv.get("DB_URL"));
+        }
+        if (dotenv.get("DB_URL") != null) {
+            System.setProperty("DB_URL", dotenv.get("DB_URL"));
+        }
+        if (dotenv.get("DB_URL") != null) {
+            System.setProperty("DB_URL", dotenv.get("DB_URL"));
         }
         SpringApplication.run(EcartApplication.class, args);
     }
