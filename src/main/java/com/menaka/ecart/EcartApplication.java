@@ -21,6 +21,7 @@ public class EcartApplication {
         if (dotenv.get("DB_USER") != null) {
             System.setProperty("DB_USER", dotenv.get("DB_USER"));
         }
+        //for setting user password
         if (dotenv.get("DB_PASS") != null) {
             System.setProperty("DB_PASS", dotenv.get("DB_PASS"));
         }
